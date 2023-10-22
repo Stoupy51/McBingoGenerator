@@ -1,0 +1,38 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:smooth_quartz_stairs"
+		},
+		"title": {
+			"text": "Smooth Quartz Stairs",
+			"color": "aqua"
+		},
+		"description": {
+			"text": "Obtenir un(e) Smooth Quartz Stairs",
+			"color": "gray"
+		},
+		"frame": "task",
+		"show_toast": false,
+		"announce_to_chat": false,
+		"hidden": false
+	},
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:smooth_quartz_stairs"
+						]
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"requirement"
+		]
+	]
+}

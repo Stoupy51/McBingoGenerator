@@ -1,0 +1,38 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:potted_flowering_azalea_bush"
+		},
+		"title": {
+			"text": "Potted Flowering Azalea Bush",
+			"color": "aqua"
+		},
+		"description": {
+			"text": "Obtenir un(e) Potted Flowering Azalea Bush",
+			"color": "gray"
+		},
+		"frame": "task",
+		"show_toast": false,
+		"announce_to_chat": false,
+		"hidden": false
+	},
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:potted_flowering_azalea_bush"
+						]
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"requirement"
+		]
+	]
+}

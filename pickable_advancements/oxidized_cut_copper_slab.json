@@ -1,0 +1,38 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:oxidized_cut_copper_slab"
+		},
+		"title": {
+			"text": "Oxidized Cut Copper Slab",
+			"color": "aqua"
+		},
+		"description": {
+			"text": "Obtenir un(e) Oxidized Cut Copper Slab",
+			"color": "gray"
+		},
+		"frame": "task",
+		"show_toast": false,
+		"announce_to_chat": false,
+		"hidden": false
+	},
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:oxidized_cut_copper_slab"
+						]
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"requirement"
+		]
+	]
+}

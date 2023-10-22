@@ -1,0 +1,38 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:deepslate_redstone_ore"
+		},
+		"title": {
+			"text": "Deepslate Redstone Ore",
+			"color": "aqua"
+		},
+		"description": {
+			"text": "Obtenir un(e) Deepslate Redstone Ore",
+			"color": "gray"
+		},
+		"frame": "task",
+		"show_toast": false,
+		"announce_to_chat": false,
+		"hidden": false
+	},
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:deepslate_redstone_ore"
+						]
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"requirement"
+		]
+	]
+}

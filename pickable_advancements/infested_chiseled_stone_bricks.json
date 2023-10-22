@@ -1,0 +1,38 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:infested_chiseled_stone_bricks"
+		},
+		"title": {
+			"text": "Infested Chiseled Stone Bricks",
+			"color": "aqua"
+		},
+		"description": {
+			"text": "Obtenir un(e) Infested Chiseled Stone Bricks",
+			"color": "gray"
+		},
+		"frame": "task",
+		"show_toast": false,
+		"announce_to_chat": false,
+		"hidden": false
+	},
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:infested_chiseled_stone_bricks"
+						]
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"requirement"
+		]
+	]
+}
