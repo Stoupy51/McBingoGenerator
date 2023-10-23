@@ -1,5 +1,4 @@
 
-
 #> simplenergy:bingo_1/line_1_col_1
 #
 # @within			function tag "first_bingo/line_1/column_1.json"
