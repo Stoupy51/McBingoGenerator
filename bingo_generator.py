@@ -124,7 +124,7 @@ with zipfile.ZipFile(f"{bingo_namespace}.zip", "w") as zip_file:
 
 			# Get a random advancement from the folder "advancements" and write it to the data pack
 			advancement = get_random_advancement(line, column)
-			zip_file.writestr(f"data/{bingo_namespace}/advancements/{line}_{column}.json", json.dumps(advancement, indent = 4))
+			zip_file.writestr(f"data/{bingo_namespace}/advancements/{line}_{column}.json", json.dumps(advancement, indent = "\t"))
 
 			# Write the reward function
 			zip_file.writestr(f"data/{bingo_namespace}/functions/{line}_{column}.mcfunction", f"""
@@ -134,7 +134,7 @@ execute unless score #{bingo_namespace}_enabled {configuration_objective} matche
 """)
 			
 	# Write the root advancement
-	zip_file.writestr(f"data/{bingo_namespace}/advancements/root.json", json.dumps(root_advancement, indent = 4))
+	zip_file.writestr(f"data/{bingo_namespace}/advancements/root.json", json.dumps(root_advancement, indent = "\t"))
 		
 	# Write the pack.mcmeta file
 	zip_file.writestr("pack.mcmeta", f"""{{
