@@ -69,31 +69,15 @@ unobtainable_blocks = [
 	"minecraft:structure_void",
 	"minecraft:structure_block",
 	"minecraft:bedrock",
-	"minecraft:infested_deepslate",
-	"minecraft:infested_deepslate_bricks",
-	"minecraft:infested_deepslate_cobblestone",
-	"minecraft:infested_deepslate_tiles",
-	"minecraft:infested_stone",
-	"minecraft:infested_chiseled_stone_bricks",
-	"minecraft:infested_cracked_stone_bricks",
-	"minecraft:infested_mossy_stone_bricks",
-	"minecraft:infested_stone_bricks",
-	"minecraft:infested_cobblestone",
-	"minecraft:infested_mossy_cobblestone",
-	"minecraft:infested_cracked_stone_bricks",
-	"minecraft:infested_chiseled_stone_bricks",
-	"minecraft:infested_deepslate_bricks",
-	"minecraft:infested_deepslate_tiles",
-	"minecraft:infested_deepslate_cobblestone",
-	"minecraft:infested_deepslate",
 	"minecraft:command_block",
 	"minecraft:repeating_command_block",
 	"minecraft:chain_command_block",
 	"minecraft:debug_stick",
 	"minecraft:command_block_minecart",
 	"minecraft:light",
+	"minecraft:totem_of_undying",
 ]
-blocks = [block for block in blocks if block not in unobtainable_blocks and not "spawn" in block]
+blocks = [block for block in blocks if block not in unobtainable_blocks and not "spawn" in block and not "template" in block and not "infested" in block]
 
 if len(blocks) < number_of_advancements_to_generate:
 	number_of_advancements_to_generate = len(blocks)
