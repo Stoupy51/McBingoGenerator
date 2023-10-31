@@ -1,0 +1,38 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:sentry_armor_trim_smithing_template"
+		},
+		"title": {
+			"text": "Sentry Armor Trim Smithing Template",
+			"color": "aqua"
+		},
+		"description": {
+			"text": "Obtenir un(e) Sentry Armor Trim Smithing Template",
+			"color": "gray"
+		},
+		"frame": "task",
+		"show_toast": false,
+		"announce_to_chat": false,
+		"hidden": false
+	},
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:sentry_armor_trim_smithing_template"
+						]
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"requirement"
+		]
+	]
+}

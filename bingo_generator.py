@@ -30,7 +30,7 @@ root_advancement = dict(json.loads(f"""
 	"display": {{
 		"icon": {{
 			"item": "{icon_item}",
-			"nbt": "{{{icon_nbt}}}"
+			"nbt": "{icon_nbt}"
 		}},
 		"title": {{
 			"text": "{bingo_name}",

@@ -1,0 +1,38 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:explorer_pottery_sherd"
+		},
+		"title": {
+			"text": "Explorer Pottery Sherd",
+			"color": "aqua"
+		},
+		"description": {
+			"text": "Obtenir un(e) Explorer Pottery Sherd",
+			"color": "gray"
+		},
+		"frame": "task",
+		"show_toast": false,
+		"announce_to_chat": false,
+		"hidden": false
+	},
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:explorer_pottery_sherd"
+						]
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"requirement"
+		]
+	]
+}

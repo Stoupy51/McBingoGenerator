@@ -1,0 +1,38 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:tide_armor_trim_smithing_template"
+		},
+		"title": {
+			"text": "Tide Armor Trim Smithing Template",
+			"color": "aqua"
+		},
+		"description": {
+			"text": "Obtenir un(e) Tide Armor Trim Smithing Template",
+			"color": "gray"
+		},
+		"frame": "task",
+		"show_toast": false,
+		"announce_to_chat": false,
+		"hidden": false
+	},
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:tide_armor_trim_smithing_template"
+						]
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"requirement"
+		]
+	]
+}

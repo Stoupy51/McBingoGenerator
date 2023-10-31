@@ -55,14 +55,46 @@ template = """{
 
 
 # Download a list of blocks
-link = "https://raw.githubusercontent.com/PixiGeko/Minecraft-generated-data/master/1.20/releases/1.20.2/custom-generated/tags/all_blocks_with_drop.json"
+link = "https://raw.githubusercontent.com/PixiGeko/Minecraft-generated-data/master/1.20/releases/1.20.2/custom-generated/registries/item.txt"
 temporary_file = "all_blocks_with_drop.json"
 r = requests.get(link)
-with open(temporary_file, "wb") as file:
-	file.write(r.content)
-blocks = dict(json.load(open(temporary_file, "r")))
-os.remove(temporary_file)
-blocks = blocks["values"]
+blocks = r.content.decode("utf-8").split("\n")
+
+# Remove unobtainable blocks
+unobtainable_blocks = [
+	"minecraft:air",
+	"minecraft:cave_air",
+	"minecraft:void_air",
+	"minecraft:barrier",
+	"minecraft:structure_void",
+	"minecraft:structure_block",
+	"minecraft:bedrock",
+	"minecraft:infested_deepslate",
+	"minecraft:infested_deepslate_bricks",
+	"minecraft:infested_deepslate_cobblestone",
+	"minecraft:infested_deepslate_tiles",
+	"minecraft:infested_stone",
+	"minecraft:infested_chiseled_stone_bricks",
+	"minecraft:infested_cracked_stone_bricks",
+	"minecraft:infested_mossy_stone_bricks",
+	"minecraft:infested_stone_bricks",
+	"minecraft:infested_cobblestone",
+	"minecraft:infested_mossy_cobblestone",
+	"minecraft:infested_cracked_stone_bricks",
+	"minecraft:infested_chiseled_stone_bricks",
+	"minecraft:infested_deepslate_bricks",
+	"minecraft:infested_deepslate_tiles",
+	"minecraft:infested_deepslate_cobblestone",
+	"minecraft:infested_deepslate",
+	"minecraft:command_block",
+	"minecraft:repeating_command_block",
+	"minecraft:chain_command_block",
+	"minecraft:debug_stick",
+	"minecraft:command_block_minecart",
+	"minecraft:light",
+]
+blocks = [block for block in blocks if block not in unobtainable_blocks and not "spawn" in block]
+
 if len(blocks) < number_of_advancements_to_generate:
 	number_of_advancements_to_generate = len(blocks)
 
