@@ -75,7 +75,8 @@ root_advancement = dict(json.loads(f"""
 	]
 }}
 """))
-last_line_advancement = root_advancement
+# Copy the root advancement to use it for the last line
+last_line_advancement = dict(root_advancement)
 last_line_advancement.pop("display")
 
 # Get a list of all advancements paths
