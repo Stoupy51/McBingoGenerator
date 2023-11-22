@@ -75,6 +75,8 @@ root_advancement = dict(json.loads(f"""
 	]
 }}
 """))
+last_line_advancement = root_advancement
+last_line_advancement.pop("display")
 
 # Get a list of all advancements paths
 advancements_paths = []
@@ -132,6 +134,8 @@ execute if score #{bingo_namespace}_enabled {configuration_objective} matches 1 
 execute if score #{bingo_namespace}_enabled {configuration_objective} matches 1 run function #{bingo_namespace}:line_{line}/column_{column} with storage {bingo_namespace} {line}_{column}
 execute unless score #{bingo_namespace}_enabled {configuration_objective} matches 1 run advancement revoke @s only {bingo_namespace}:{line}_{column}
 """)
+		# Write a last advancement for the line with no display
+		zip_file.writestr(f"data/{bingo_namespace}/advancements/last_line_{line}.json", json.dumps(last_line_advancement, indent = "\t"))
 			
 	# Write the root advancement
 	zip_file.writestr(f"data/{bingo_namespace}/advancements/root.json", json.dumps(root_advancement, indent = "\t"))
