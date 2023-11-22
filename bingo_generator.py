@@ -135,6 +135,7 @@ execute if score #{bingo_namespace}_enabled {configuration_objective} matches 1 
 execute unless score #{bingo_namespace}_enabled {configuration_objective} matches 1 run advancement revoke @s only {bingo_namespace}:{line}_{column}
 """)
 		# Write a last advancement for the line with no display
+		last_line_advancement["parent"] = f"{bingo_namespace}:{line}_{bingo_size['columns']}"
 		zip_file.writestr(f"data/{bingo_namespace}/advancements/last_line_{line}.json", json.dumps(last_line_advancement, indent = "\t"))
 			
 	# Write the root advancement
